@@ -1,6 +1,6 @@
 # BTC PRICE APP
 
-A bitcoin price app for Android or IOS written with React Native.
+A bitcoin price app for Android and IOS written with React Native.
 
 ## Table of Contents
 
