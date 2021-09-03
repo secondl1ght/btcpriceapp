@@ -3,6 +3,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { StyleSheet, Text, View, Button, TextInput, Image } from "react-native";
 import { getBTCPrice } from "../api/api";
 import { Picker } from "@react-native-picker/picker";
+import { satoshi } from '../satoshi';
 
 export function priceScreen() {
   const [btcprice, setBTCPrice] = useState("");
@@ -20,11 +21,11 @@ export function priceScreen() {
 
   useEffect(() => {
     priceCallback();
-  }, []);
+  }, [currency]);
 
   return (
     <View style={styles.container}>
-      <Text>{btcprice}</Text>
+      <Text style={styles.price}>{btcprice}</Text>
       <Picker
         selectedValue={currency}
         onValueChange={(itemValue, itemIndex) => setCurrency(itemValue)}
@@ -34,6 +35,7 @@ export function priceScreen() {
         <Picker.Item label="EUR" value="EUR" />
       </Picker>
       <Button title="Get Price" onPress={priceCallback} />
+      <Text>{satoshi() + ' - Satoshi Nakamoto'}</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -46,4 +48,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  picker: {
+
+  },
+  price: {
+    fontSize: 15
+  },
+  button: {
+
+  },
+  sat: {
+
+  },
+
 });
