@@ -22,6 +22,7 @@ With this app you can get live bitcoin prices in multiple fiat currencies, you c
 
 -   React Native
 -   JavaScript
+-   Expo
 
 ## Features
 
@@ -55,6 +56,7 @@ Not Deployed
 
 -   Coded using Atom text editor
 -   API data provided by coindesk.com
+-   Thanks to the React community for creating some custom core components
 
 ## Contact
 
