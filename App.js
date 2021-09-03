@@ -14,7 +14,7 @@ export default function App() {
     let price = await getBTCPrice(currency);
     const options = { style: 'currency', currency: currency };
     const numberFormat = new Intl.NumberFormat('en-US', options);
-    setBTCPrice(numberFormat.format(price) + currency);
+    setBTCPrice(numberFormat.format(price) + ' ' + currency);
   }, [btcprice, currency]);
 
   useEffect(() => {priceCallback()}, []);
