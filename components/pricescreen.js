@@ -9,12 +9,15 @@ import "intl/locale-data/jsonp/en";
 export function priceScreen() {
   const [btcprice, setBTCPrice] = useState("");
   const [currency, setCurrency] = useState("USD");
+  const [loading, setLoading] = useState(false);
 
   const priceCallback = useCallback(
     async function () {
+      setLoading(true);
       let price = await getBTCPrice(currency);
       const options = { style: "currency", currency: currency };
       const numberFormat = new Intl.NumberFormat("en-US", options);
+      setLoading(false);
       setBTCPrice(numberFormat.format(price) + " " + currency);
     },
     [btcprice, currency]
@@ -40,7 +43,12 @@ export function priceScreen() {
             </Picker>
           </View>
         </View>
-        <Button title="Get Price" onPress={priceCallback} color="#F7931A" />
+        <Button
+          title="Get Price"
+          onPress={priceCallback}
+          color="#F7931A"
+          disabled={loading ? true : false}
+        />
       </View>
       <View style={{ paddingBottom: 75 }}>
         <Text style={styles.sat}>{satoshi() + " - Satoshi Nakamoto"}</Text>
