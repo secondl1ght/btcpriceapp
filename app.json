@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "BTC Price Check",
+    "name": "BTC Price Watch",
     "slug": "btcpriceapp",
     "version": "1.0.0",
     "orientation": "portrait",
