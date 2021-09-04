@@ -8,7 +8,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "whitesmoke"
+      "backgroundColor": "#F5F5F5"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,7 +22,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "whitesmoke"
+        "backgroundColor": "#F5F5F5"
       },
       "package": "btcpriceapp.apk"
     },
