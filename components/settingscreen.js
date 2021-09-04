@@ -1,8 +1,12 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { StyleSheet, Text, View, Button, TextInput, Image } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export function settingScreen() {
-  return <View></View>;
+  return (
+    <View style={styles.container}>
+      <Text>No settings yet.</Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({

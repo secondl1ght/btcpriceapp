@@ -1,13 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Button,
-  TextInput,
-  Image,
-  ScrollView,
-} from "react-native";
+import { StyleSheet, Text, View, TextInput } from "react-native";
 import { Picker } from "react-native";
 import { getBTCPrice } from "../api/api";
 import { satoshi } from "../satoshi";
@@ -22,14 +14,10 @@ export function calcScreen() {
   const priceCallback = useCallback(
     async function () {
       let price = await getBTCPrice(currency);
-      console.log(price);
       let priceCalc = parseFloat(price) * parseFloat(calcValue);
-      console.log(calcValue);
-      console.log(priceCalc);
       const options = { style: "currency", currency: currency };
       const numberFormat = new Intl.NumberFormat("en-US", options);
       setBTCPrice(numberFormat.format(priceCalc));
-      console.log(btcprice);
     },
     [btcprice, currency, calcValue]
   );
@@ -67,7 +55,7 @@ export function calcScreen() {
               borderRadius: 5,
             }}
             onChange={(e) => {
-              setCalcValue(e.target.value);
+              setCalcValue(e.nativeEvent.text);
             }}
           />
 

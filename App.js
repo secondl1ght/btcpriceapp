@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState, useEffect, useCallback } from "react";
-import { StyleSheet, Text, View, Button, TextInput, Image } from "react-native";
+import { Text, View, Button, TextInput } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { priceScreen } from "./components/pricescreen";
 import { calcScreen } from "./components/calcscreen";
@@ -12,20 +12,17 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator
+        screenOptions={
+          ({ tabBarStyle: { backgroundColor: "lightgrey" } },
+          { tabBarActiveTintColor: "black" })
+        }
+      >
         <Tab.Screen name="Price" component={priceScreen} />
         <Tab.Screen name="Calculator" component={calcScreen} />
         <Tab.Screen name="Settings" component={settingScreen} />
       </Tab.Navigator>
+      <StatusBar style="auto" />
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

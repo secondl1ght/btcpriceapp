@@ -1,6 +1,5 @@
-import { StatusBar } from "expo-status-bar";
 import React, { useState, useEffect, useCallback } from "react";
-import { StyleSheet, Text, View, Button, TextInput, Image } from "react-native";
+import { StyleSheet, Text, View, Button } from "react-native";
 import { getBTCPrice } from "../api/api";
 import { Picker } from "react-native";
 import { satoshi } from "../satoshi";
@@ -39,12 +38,16 @@ export function priceScreen() {
             <Picker.Item label="EUR" value="EUR" />
           </Picker>
         </View>
-        <Button title="Get Price" onPress={priceCallback} color="#F7931A" />
+        <Button
+          title="Get Price"
+          onPress={priceCallback}
+          color="#F7931A;
+"
+        />
       </View>
       <View style={{ paddingBottom: 75 }}>
         <Text style={styles.sat}>{satoshi() + " - Satoshi Nakamoto"}</Text>
       </View>
-      <StatusBar style="auto" />
     </View>
   );
 }
