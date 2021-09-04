@@ -38,7 +38,7 @@ export function priceScreen() {
               onValueChange={(itemValue, itemIndex) => setCurrency(itemValue)}
             >
               <Picker.Item label="USD" value="USD" />
-              <Picker.Item label="GDP" value="GBP" />
+              <Picker.Item label="GBP" value="GBP" />
               <Picker.Item label="EUR" value="EUR" />
             </Picker>
           </View>
