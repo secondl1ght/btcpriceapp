@@ -41,8 +41,7 @@ export function priceScreen() {
         <Button
           title="Get Price"
           onPress={priceCallback}
-          color="#F7931A;
-"
+          color="#F7931A"
         />
       </View>
       <View style={{ paddingBottom: 75 }}>
