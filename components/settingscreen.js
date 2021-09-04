@@ -2,11 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { StyleSheet, Text, View, Button, TextInput, Image } from "react-native";
 
 export function settingScreen() {
-  return (
-    <View>
-      <Text>Test</Text>
-    </View>
-  );
+  return <View></View>;
 }
 
 const styles = StyleSheet.create({

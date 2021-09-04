@@ -2,8 +2,10 @@ import { StatusBar } from "expo-status-bar";
 import React, { useState, useEffect, useCallback } from "react";
 import { StyleSheet, Text, View, Button, TextInput, Image } from "react-native";
 import { getBTCPrice } from "../api/api";
-import { Picker } from "@react-native-picker/picker";
-import { satoshi } from '../satoshi';
+import { Picker } from "react-native";
+import { satoshi } from "../satoshi";
+import "intl";
+import "intl/locale-data/jsonp/en";
 
 export function priceScreen() {
   const [btcprice, setBTCPrice] = useState("");
@@ -25,17 +27,23 @@ export function priceScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.price}>{btcprice}</Text>
-      <Picker
-        selectedValue={currency}
-        onValueChange={(itemValue, itemIndex) => setCurrency(itemValue)}
-      >
-        <Picker.Item label="USD" value="USD" />
-        <Picker.Item label="GDP" value="GBP" />
-        <Picker.Item label="EUR" value="EUR" />
-      </Picker>
-      <Button title="Get Price" onPress={priceCallback} />
-      <Text>{satoshi() + ' - Satoshi Nakamoto'}</Text>
+      <View style={{ flex: 1.5, justifyContent: "center" }}>
+        <Text style={styles.price}>{btcprice}</Text>
+        <View style={{ flex: 0.25, justifyContent: "center", paddingTop: 100 }}>
+          <Picker
+            selectedValue={currency}
+            onValueChange={(itemValue, itemIndex) => setCurrency(itemValue)}
+          >
+            <Picker.Item label="USD" value="USD" />
+            <Picker.Item label="GDP" value="GBP" />
+            <Picker.Item label="EUR" value="EUR" />
+          </Picker>
+        </View>
+        <Button title="Get Price" onPress={priceCallback} color="#F7931A" />
+      </View>
+      <View style={{ paddingBottom: 75 }}>
+        <Text style={styles.sat}>{satoshi() + " - Satoshi Nakamoto"}</Text>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -44,21 +52,19 @@ export function priceScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "whitesmoke",
     alignItems: "center",
     justifyContent: "center",
   },
-  picker: {
-
-  },
   price: {
-    fontSize: 15
-  },
-  button: {
-
+    fontSize: 35,
+    backgroundColor: "lightgreen",
+    borderRadius: 5,
   },
   sat: {
-
+    textAlign: "center",
+    fontStyle: "italic",
+    color: "black",
+    backgroundColor: "antiquewhite",
   },
-
 });
