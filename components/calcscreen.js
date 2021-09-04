@@ -28,7 +28,7 @@ export function calcScreen() {
 
   return (
     <View style={styles.container}>
-      <View style={{ flex: 1, justifyContent: "center" }}>
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <Text style={styles.price}>
           {btcprice} {currency}
         </Text>
@@ -40,35 +40,52 @@ export function calcScreen() {
             paddingTop: 100,
           }}
         >
-          <TextInput
-            autoFocus={true}
-            placeholder="21 000 000"
-            keyboardType="number-pad"
-            maxLength={21000000}
-            returnKeyLabel="Convert"
+          <View
             style={{
-              color: "black",
-              fontSize: 20,
-              textAlign: "center",
-              backgroundColor: "#F7931A",
-              padding: 10,
-              borderRadius: 5,
+              flex: 1,
+              justifyContent: "center",
+              alignSelf: "center",
+              paddingTop: 10,
             }}
-            onChange={(e) => {
-              setCalcValue(e.nativeEvent.text);
-            }}
-          />
-
-          <Picker
-            selectedValue={currency}
-            onValueChange={(itemValue, itemIndex) => setCurrency(itemValue)}
           >
-            <Picker.Item label="USD" value="USD" />
-            <Picker.Item label="GDP" value="GBP" />
-            <Picker.Item label="EUR" value="EUR" />
-          </Picker>
+            <TextInput
+              autoFocus={true}
+              placeholder="21 000 000"
+              keyboardType="number-pad"
+              maxLength={21000000}
+              returnKeyLabel="Convert"
+              style={{
+                color: "black",
+                fontSize: 20,
+                textAlign: "center",
+                backgroundColor: "#F7931A",
+                padding: 10,
+                borderRadius: 5,
+              }}
+              onChange={(e) => {
+                setCalcValue(e.nativeEvent.text);
+              }}
+            />
+          </View>
+          <View style={{ opacity: 0.5 }}>
+            <Picker
+              selectedValue={currency}
+              onValueChange={(itemValue, itemIndex) => setCurrency(itemValue)}
+            >
+              <Picker.Item label="USD" value="USD" />
+              <Picker.Item label="GDP" value="GBP" />
+              <Picker.Item label="EUR" value="EUR" />
+            </Picker>
+          </View>
         </View>
-        <Text style={{ textAlign: "center", flex: 0.25, paddingTop: 15 }}>
+        <Text
+          style={{
+            textAlign: "center",
+            flex: 0.25,
+            paddingTop: 15,
+            fontStyle: "bold",
+          }}
+        >
           Convert any amount of BTC into a fiat value.
         </Text>
 
@@ -81,7 +98,7 @@ export function calcScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "whitesmoke",
+    backgroundColor: "#3363A8",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -95,6 +112,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontStyle: "italic",
     color: "black",
-    backgroundColor: "antiquewhite",
+    backgroundColor: "lightblue",
+    borderRadius: 5,
+    padding: 5,
   },
 });

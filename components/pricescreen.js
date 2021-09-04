@@ -29,20 +29,18 @@ export function priceScreen() {
       <View style={{ flex: 1.5, justifyContent: "center" }}>
         <Text style={styles.price}>{btcprice}</Text>
         <View style={{ flex: 0.25, justifyContent: "center", paddingTop: 100 }}>
-          <Picker
-            selectedValue={currency}
-            onValueChange={(itemValue, itemIndex) => setCurrency(itemValue)}
-          >
-            <Picker.Item label="USD" value="USD" />
-            <Picker.Item label="GDP" value="GBP" />
-            <Picker.Item label="EUR" value="EUR" />
-          </Picker>
+          <View style={{ opacity: 0.5 }}>
+            <Picker
+              selectedValue={currency}
+              onValueChange={(itemValue, itemIndex) => setCurrency(itemValue)}
+            >
+              <Picker.Item label="USD" value="USD" />
+              <Picker.Item label="GDP" value="GBP" />
+              <Picker.Item label="EUR" value="EUR" />
+            </Picker>
+          </View>
         </View>
-        <Button
-          title="Get Price"
-          onPress={priceCallback}
-          color="#F7931A"
-        />
+        <Button title="Get Price" onPress={priceCallback} color="#F7931A" />
       </View>
       <View style={{ paddingBottom: 75 }}>
         <Text style={styles.sat}>{satoshi() + " - Satoshi Nakamoto"}</Text>
@@ -54,7 +52,7 @@ export function priceScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "whitesmoke",
+    backgroundColor: "#3363A8",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -67,6 +65,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontStyle: "italic",
     color: "black",
-    backgroundColor: "antiquewhite",
+    backgroundColor: "lightblue",
+    borderRadius: 5,
+    padding: 5,
   },
 });

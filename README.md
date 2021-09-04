@@ -57,6 +57,7 @@ Not Deployed
 -   Coded using Atom text editor
 -   API data provided by coindesk.com
 -   Thanks to the React community for creating some custom core components
+-   Thanks to the nakamotoinstitute.org for collecting Satoshi's quotes
 
 ## Contact
 

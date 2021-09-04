@@ -12,7 +12,7 @@ export function settingScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#3363A8",
     alignItems: "center",
     justifyContent: "center",
   },
