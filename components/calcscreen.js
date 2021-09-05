@@ -23,7 +23,11 @@ export function calcScreen() {
   );
 
   useEffect(() => {
-    priceCallback();
+    if(calcValue !== '') {
+    priceCallback();}
+    else {
+      setBTCPrice('$0.00')
+    }
   }, [calcValue, currency]);
 
   return (
