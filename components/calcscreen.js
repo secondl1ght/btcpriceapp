@@ -52,7 +52,7 @@ export function calcScreen() {
               autoFocus={true}
               placeholder="21 000 000"
               keyboardType="number-pad"
-              maxLength={21000000}
+              maxLength={8}
               returnKeyLabel="Convert"
               style={{
                 color: "black",
