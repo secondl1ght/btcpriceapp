@@ -7,7 +7,7 @@ import "intl";
 import "intl/locale-data/jsonp/en";
 
 export function priceScreen() {
-  const [btcprice, setBTCPrice] = useState("");
+  const [btcprice, setBTCPrice] = useState("Loading...");
   const [currency, setCurrency] = useState("USD");
   const [loading, setLoading] = useState(false);
 

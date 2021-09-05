@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 export function settingScreen() {
   return (
     <View style={styles.container}>
-      <Text>No settings yet... check back later! ;)</Text>
+      <Text>No settings yet... check back later!</Text>
     </View>
   );
 }
