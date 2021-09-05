@@ -1,6 +1,6 @@
 # BTC PRICE WATCH
 
-A bitcoin price app for Android and IOS written with React Native.
+A bitcoin price app for Android and iOS written with React Native.
 
 ## Table of Contents
 
@@ -28,7 +28,7 @@ With this app you can get live bitcoin prices in multiple fiat currencies, you c
 
 -   Live btc prices
 -   BTC to fiat calculator
--   Dark mode ;)
+-   Insights from Satoshi
 
 ## Screenshots
 
@@ -42,11 +42,11 @@ Simply select a currency and click a button to get live prices, enter a bitcoin 
 
 Project is: _in development_
 
-Currently in MVP stage.
+Still some work can be done to improve but the app is functioning well.
 
 ## Deployment Status
 
-Not Deployed
+Deployed as an APK and available for download directly on GitHub.
 
 ## Room for Improvement
 
