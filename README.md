@@ -32,7 +32,7 @@ With this app you can get live bitcoin prices in multiple fiat currencies, you c
 
 ## Screenshots
 
-![screenshot](./assets/screenshot.jpeg)
+<img src='./assets/screenshot.jpeg' style='height:100px'>
 
 ## Usage
 
