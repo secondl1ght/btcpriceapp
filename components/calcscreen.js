@@ -26,7 +26,8 @@ export function calcScreen() {
     if(calcValue !== '') {
     priceCallback();}
     else {
-      setBTCPrice('$0.00')
+      setCalcValue(0);
+      priceCallback();
     }
   }, [calcValue, currency]);
 
