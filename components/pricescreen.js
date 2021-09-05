@@ -32,16 +32,14 @@ export function priceScreen() {
       <View style={{ flex: 1.5, justifyContent: "center" }}>
         <Text style={styles.price}>{btcprice}</Text>
         <View style={{ flex: 0.25, justifyContent: "center", paddingTop: 100 }}>
-          <View style={{ opacity: 0.5 }}>
-            <Picker
-              selectedValue={currency}
-              onValueChange={(itemValue, itemIndex) => setCurrency(itemValue)}
-            >
-              <Picker.Item label="USD" value="USD" />
-              <Picker.Item label="GBP" value="GBP" />
-              <Picker.Item label="EUR" value="EUR" />
-            </Picker>
-          </View>
+          <Picker
+            selectedValue={currency}
+            onValueChange={(itemValue, itemIndex) => setCurrency(itemValue)}
+          >
+            <Picker.Item label="USD" value="USD" />
+            <Picker.Item label="GBP" value="GBP" />
+            <Picker.Item label="EUR" value="EUR" />
+          </Picker>
         </View>
         <Button
           title="Get Price"

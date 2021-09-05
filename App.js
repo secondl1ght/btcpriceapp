@@ -13,19 +13,14 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        screenOptions={{ headerShown: "false" }}
+        screenOptions={{ tabBarHideOnKeyboard: true }}
         tabBarOptions={{
           showLabel: false,
           style: {
-            position: "absolute",
-            bottom: 25,
-            left: 20,
-            right: 20,
-            elevation: 0,
-            backgroundColor: "#FFFFFF",
             borderRadius: 15,
-            height: 90,
             ...styles.shadow,
+            headerShown: "false",
+            tabBarHideOnKeyboard: true,
           },
         }}
       >
@@ -39,7 +34,6 @@ export default function App() {
                 style={{
                   alignItems: "center",
                   justifyContent: "center",
-                  top: 10,
                 }}
               >
                 <Image
@@ -73,7 +67,6 @@ export default function App() {
                 style={{
                   alignItems: "center",
                   justifyContent: "center",
-                  top: 10,
                 }}
               >
                 <Image
@@ -107,7 +100,6 @@ export default function App() {
                 style={{
                   alignItems: "center",
                   justifyContent: "center",
-                  top: 10,
                 }}
               >
                 <Image

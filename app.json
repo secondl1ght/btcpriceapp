@@ -22,7 +22,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#3363A8"
+        "backgroundColor": "#F5F5F5"
       },
       "package": "btcpriceapp.apk"
     },

@@ -45,7 +45,7 @@ export function calcScreen() {
               flex: 1,
               justifyContent: "center",
               alignSelf: "center",
-              paddingTop: 10,
+              paddingTop: 50,
             }}
           >
             <TextInput
@@ -61,13 +61,14 @@ export function calcScreen() {
                 backgroundColor: "#F7931A",
                 padding: 10,
                 borderRadius: 5,
+                height: 50,
               }}
               onChange={(e) => {
                 setCalcValue(e.nativeEvent.text);
               }}
             />
           </View>
-          <View style={{ opacity: 0.5 }}>
+          <View style={{ height: 35, paddingTop: 25, paddingBottom: 100 }}>
             <Picker
               selectedValue={currency}
               onValueChange={(itemValue, itemIndex) => setCurrency(itemValue)}
@@ -83,7 +84,6 @@ export function calcScreen() {
             textAlign: "center",
             flex: 0.25,
             paddingTop: 15,
-            fontStyle: "bold",
           }}
         >
           Convert any amount of BTC into a fiat value.
