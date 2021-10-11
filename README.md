@@ -56,7 +56,7 @@ Deployed as an APK and available for download directly on GitHub.
 ## Acknowledgements
 
 -   Coded using Atom text editor
--   API data provided by coindesk.com
+-   API data provided by blockchain.com
 -   Thanks to the React community for creating some custom core components
 -   Thanks to the nakamotoinstitute.org for collecting Satoshi's quotes
 

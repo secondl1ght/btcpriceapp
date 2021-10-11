@@ -4,7 +4,6 @@ import { Text, View, Image, StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { priceScreen } from "./components/pricescreen";
 import { calcScreen } from "./components/calcscreen";
-import { settingScreen } from "./components/settingscreen";
 import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
@@ -85,39 +84,6 @@ export default function App() {
                   }}
                 >
                   CALCULATOR
-                </Text>
-              </View>
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="Settings"
-          component={settingScreen}
-          options={{
-            headerShown: "false",
-            tabBarIcon: ({ focused }) => (
-              <View
-                style={{
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <Image
-                  source={require("./assets/icons/settings.png")}
-                  resizeMode="contain"
-                  style={{
-                    width: 25,
-                    height: 25,
-                    tintColor: focused ? "#F7931A" : "#000000",
-                  }}
-                />
-                <Text
-                  style={{
-                    color: focused ? "#F7931A" : "#000000",
-                    fontSize: 12,
-                  }}
-                >
-                  SETTINGS
                 </Text>
               </View>
             ),

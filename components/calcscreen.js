@@ -76,6 +76,7 @@ export function calcScreen() {
             <Picker
               selectedValue={currency}
               onValueChange={(itemValue, itemIndex) => setCurrency(itemValue)}
+              mode='dropdown'
             >
               <Picker.Item label="AUD" value="AUD" />
               <Picker.Item label="BRL" value="BRL" />
