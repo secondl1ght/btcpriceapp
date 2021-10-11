@@ -4,11 +4,11 @@ const axios = require("axios");
 export async function getBTCPrice(currency) {
   try {
     const response = await axios.get(
-      "https://api.coindesk.com/v1/bpi/currentprice.json"
+      "https://blockchain.info/ticker"
     );
-    return response.data.bpi[currency].rate_float;
+    return response.data[currency].last;
   } catch (error) {
-    console.log("Trouble reaching the Coindesk API.");
+    console.log("Trouble reaching the Blockchain API.");
   }
 }
 

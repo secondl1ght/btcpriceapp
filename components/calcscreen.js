@@ -23,10 +23,10 @@ export function calcScreen() {
   );
 
   useEffect(() => {
-    if(calcValue !== '') {
-    priceCallback();}
-    else {
-      setBTCPrice('---')
+    if (calcValue !== "") {
+      priceCallback();
+    } else {
+      setBTCPrice("---");
     }
   }, [calcValue, currency]);
 
@@ -34,7 +34,7 @@ export function calcScreen() {
     <View style={styles.container}>
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <Text style={styles.price}>
-          {btcprice} {currency}
+          {btcprice}
         </Text>
         <View
           style={{
@@ -77,9 +77,33 @@ export function calcScreen() {
               selectedValue={currency}
               onValueChange={(itemValue, itemIndex) => setCurrency(itemValue)}
             >
-              <Picker.Item label="USD" value="USD" />
-              <Picker.Item label="GBP" value="GBP" />
+              <Picker.Item label="AUD" value="AUD" />
+              <Picker.Item label="BRL" value="BRL" />
+              <Picker.Item label="CAD" value="CAD" />
+              <Picker.Item label="CHF" value="CHF" />
+              <Picker.Item label="CLP" value="CLP" />
+              <Picker.Item label="CNY" value="CNY" />
+              <Picker.Item label="CZK" value="CZK" />
+              <Picker.Item label="DKK" value="DKK" />
               <Picker.Item label="EUR" value="EUR" />
+              <Picker.Item label="GBP" value="GBP" />
+              <Picker.Item label="HKD" value="HKD" />
+              <Picker.Item label="HRK" value="HRK" />
+              <Picker.Item label="HUF" value="HUF" />
+              <Picker.Item label="INR" value="INR" />
+              <Picker.Item label="ISK" value="ISK" />
+              <Picker.Item label="JPY" value="JPY" />
+              <Picker.Item label="KRW" value="KRW" />
+              <Picker.Item label="NZD" value="NZD" />
+              <Picker.Item label="PLN" value="PLN" />
+              <Picker.Item label="RON" value="RON" />
+              <Picker.Item label="RUB" value="RUB" />
+              <Picker.Item label="SEK" value="SEK" />
+              <Picker.Item label="SGD" value="SGD" />
+              <Picker.Item label="THB" value="THB" />
+              <Picker.Item label="TRY" value="TRY" />
+              <Picker.Item label="TWD" value="TWD" />
+              <Picker.Item label="USD" value="USD" />
             </Picker>
           </View>
         </View>
