@@ -50,7 +50,8 @@ Deployed as an APK and available for download directly on GitHub.
 
 ## Room for Improvement
 
--   Add more currencies
+-   Add settings
+-   Improve styling
 
 ## Acknowledgements
 
