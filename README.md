@@ -61,6 +61,8 @@ Deployed as an APK and available for download directly on GitHub.
 -   API data provided by blockchain.com
 -   Thanks to the React community for creating some custom core components
 -   Thanks to the nakamotoinstitute.org for collecting Satoshi's quotes
+-   F-Droid banner image by <a href="https://unsplash.com/@bermixstudio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bermix Studio</a> on <a href="https://unsplash.com/s/photos/bitcoin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
 
 ## Contact
 
