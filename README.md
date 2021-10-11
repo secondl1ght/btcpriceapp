@@ -2,6 +2,8 @@
 
 A bitcoin price app for Android and iOS written with React Native.
 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/secondl1ght/btcpriceapp?style=flat-square)
+
 ## Table of Contents
 
 -   [General Info](#general-information)
