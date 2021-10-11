@@ -1,4 +1,4 @@
-# BTC PRICE WATCH
+# BITCOIN PRICE WATCH
 
 A bitcoin price app for Android and iOS written with React Native.
 
