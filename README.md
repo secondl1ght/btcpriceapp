@@ -10,6 +10,7 @@ A bitcoin price app for Android and iOS written with React Native.
 -   [Screenshots](#screenshots)
 -   [Usage](#usage)
 -   [Project Status](#project-status)
+-   [Deployment Status](#deployment-status)
 -   [Room for Improvement](#room-for-improvement)
 -   [Acknowledgements](#acknowledgements)
 -   [Contact](#contact)
